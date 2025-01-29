@@ -10,7 +10,8 @@ const theme = {
     gray: '#bdc7d0'
   },
   fontSizes: {
-    default: '16px'
+    default: '16px',
+    big: '20px',
   },
   fonts: {
     default: '"Poppins", serif'

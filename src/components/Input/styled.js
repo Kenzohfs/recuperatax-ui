@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const InputContainer = styled.div`
   position: relative;
   width: 100%;
-  max-width: 300px;
 `;
 
 export const StyledInput = styled.input`
@@ -12,7 +11,6 @@ export const StyledInput = styled.input`
   border: 2px solid ${({ theme }) => theme.colors.gray};
   font-size: 16px;
   width: 100%;
-  max-width: 300px;
   outline: none;
 
   &:focus {

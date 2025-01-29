@@ -1,11 +1,16 @@
 import React, { useState } from 'react';
 import { FaLock, FaUserAlt } from 'react-icons/fa';
+import Button from '../../components/Button';
 import Input from '../../components/Input';
 import {
   Background,
+  ForgotPassword,
+  LoginOptions,
+  ModalBottom,
   ModalContainer,
   ModalContent,
   ModalHeader,
+  RememberMeContainer,
   WelcomeMessage,
 } from './styled';
 
@@ -13,6 +18,7 @@ const Login = () => {
   const [user, setUser] = useState('');
   const [pass, setPass] = useState('');
 
+  // TODO: Convert Modal to component
   return (
     <Background>
       <ModalContainer>
@@ -35,7 +41,19 @@ const Login = () => {
             value={pass}
             icon={FaLock}
           />
+
+          <LoginOptions>
+            <RememberMeContainer>
+              <input id="rememberme" type="checkbox" />
+              <label htmlFor="rememberme">Lembrar de mim</label>
+            </RememberMeContainer>
+            <ForgotPassword>Esqueci minha senha</ForgotPassword>
+          </LoginOptions>
         </ModalContent>
+
+        <ModalBottom>
+          <Button onClick={() => {}}>LOGIN</Button>
+        </ModalBottom>
       </ModalContainer>
     </Background>
   );

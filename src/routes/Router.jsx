@@ -11,6 +11,7 @@ const RouterProvider = () => (
   <BrowserRouter>
     <Routes>
       <Route path={PublicPaths.LOGIN} element={<Login />} />
+
       <Route element={<Layout />}>
         <Route path={PrivatePaths.HOME} element={<Home />}></Route>
         <Route path={PrivatePaths.COMPANIES} element={<Companies />}></Route>

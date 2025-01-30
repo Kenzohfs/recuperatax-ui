@@ -13,6 +13,7 @@ const theme = {
   },
   fontSizes: {
     default: '16px',
+    medium: '18px',
     big: '20px',
     veryBig: '24px',
     xl: '32px',

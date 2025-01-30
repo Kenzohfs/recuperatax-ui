@@ -5,13 +5,13 @@ export const CompaniesHeader = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 1.5rem;
-  align-items: stretch;
 `;
 
 export const CompaniesTitle = styled.h1`
   color: ${({ theme }) => theme.colors.blue};
-  font-size: ${({ theme }) => theme.fontSizes.xl};
+  font-size: ${({ theme }) => theme.fontSizes.veryBig};
   font-weight: 600;
+  margin: 0;
 `;
 
 export const ActionsContainer = styled.div`
@@ -22,10 +22,14 @@ export const ActionsContainer = styled.div`
 export const SearchContainer = styled.div`
   height: 100%;
   display: flex;
-  align-items: center;
-  gap: 0.5rem;
+  gap: 0.2rem;
 `;
 
-export const ButtonContainer = styled.div`
-  height: 100%;
+export const Content = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
 `;

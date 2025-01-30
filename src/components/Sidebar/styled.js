@@ -27,6 +27,9 @@ export const CollapsedSidebarUpMenu = styled.div`
 
 export const CollapsedSidebarDownMenu = styled.div`
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 export const ExpandedSidebar = styled.div`
@@ -34,6 +37,15 @@ export const ExpandedSidebar = styled.div`
   background-color: ${({ theme }) => theme.colors.darkBlue};
   color: white;
   display: ${({ $isExpanded }) => ($isExpanded ? 'block' : 'none')};
+  padding-top: 20px;
+`;
+
+export const ExpandedSidebarContent = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 
 export const SidebarIcon = styled.div`
@@ -56,11 +68,30 @@ export const SidebarMenu = styled.ul`
   margin: 0;
 `;
 
-export const SidebarMenuItem = styled.li`
-  padding: 10px 20px;
+export const SidebarMenuItem = styled.div`
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
   cursor: pointer;
   &:hover {
     background-color: ${({ theme }) => darken(0.1, theme.colors.darkBlue)};
     color: ${({ theme }) => theme.colors.green};
   }
+`;
+
+export const Divider = styled.hr`
+  width: 80%;
+  margin: 0;
+  border: 0;
+  border-top: 1px solid ${({ theme }) => theme.colors.white};
+`;
+
+export const ExpandedSidebarUpMenu = styled.div`
+  width: 100%;
+`;
+
+export const ExpandedSidebarDownMenu = styled.div`
+  width: 100%;
 `;

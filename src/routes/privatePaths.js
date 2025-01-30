@@ -8,6 +8,7 @@ const PrivatePaths = {
   MEMBERS_AREA: '/members-area',
   OPEN_CALL: '/open-call',
   COMPANIES: '/companies',
+  REGISTERS_COMPANIES: '/registers/companies',
 };
 
 export default PrivatePaths;

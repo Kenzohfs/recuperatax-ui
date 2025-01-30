@@ -15,6 +15,7 @@ const theme = {
     default: '16px',
     big: '20px',
     veryBig: '24px',
+    xl: '32px',
     small: '14px',
   },
   fonts: {

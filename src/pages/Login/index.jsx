@@ -53,7 +53,9 @@ const Login = () => {
         </ModalContent>
 
         <ModalBottom>
-          <Button onClick={() => {}}>LOGIN</Button>
+          <Button fullWidth={true} onClick={() => {}}>
+            LOGIN
+          </Button>
         </ModalBottom>
       </ModalContainer>
     </Background>

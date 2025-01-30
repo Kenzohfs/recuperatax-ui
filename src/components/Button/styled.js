@@ -2,7 +2,11 @@ import { darken } from 'polished';
 import styled from 'styled-components';
 
 export const StyledButton = styled.button`
-  width: 100%;
+  ${({ $fullWidth }) => ($fullWidth ? 'width: 100%;' : '')}
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: ${({ theme, $primary }) =>
     $primary ? theme.colors.green : theme.colors.white};
   color: white;

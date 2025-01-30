@@ -1,7 +1,7 @@
 import React from 'react';
 import { IconWrapper, InputContainer, StyledInput } from './styled';
 
-const Input = ({ name, placeholder, value, onChange, icon: Icon }) => {
+const Input = ({ name, placeholder, value, onChange, icon: Icon, ...rest }) => {
   return (
     <InputContainer>
       {Icon && (
@@ -16,6 +16,7 @@ const Input = ({ name, placeholder, value, onChange, icon: Icon }) => {
         value={value}
         onChange={onChange}
         $hasIcon={!!Icon}
+        {...rest}
       />
     </InputContainer>
   );

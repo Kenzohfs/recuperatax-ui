@@ -23,8 +23,6 @@ const Company = ({
     city = '',
   } = company;
 
-  console.log(company, cnpj, city);
-
   return (
     <Container>
       <ContainerFields>

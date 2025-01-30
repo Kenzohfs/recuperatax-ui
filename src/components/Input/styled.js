@@ -6,10 +6,10 @@ export const InputContainer = styled.div`
 `;
 
 export const StyledInput = styled.input`
-  padding: 10px;
+  padding: 8px;
   padding-left: ${({ $hasIcon }) => ($hasIcon ? '40px' : '10px')};
   border: 2px solid ${({ theme }) => theme.colors.gray};
-  font-size: 16px;
+  font-size: ${({ theme }) => theme.fontSizes.default};
   width: 100%;
   outline: none;
 

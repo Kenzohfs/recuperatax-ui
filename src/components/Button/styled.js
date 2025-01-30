@@ -10,7 +10,7 @@ export const StyledButton = styled.button`
   background-color: ${({ theme, $primary }) =>
     $primary ? theme.colors.green : theme.colors.white};
   color: white;
-  padding: 10px 20px;
+  padding: 8px 15px;
   border: none;
   border-radius: 5px;
   font-size: 16px;

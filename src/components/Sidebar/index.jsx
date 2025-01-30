@@ -20,7 +20,7 @@ import {
 const Sidebar = () => {
   const navigate = useNavigate();
 
-  const [isExpanded, setIsExpanded] = useState(true);
+  const [isExpanded, setIsExpanded] = useState(false);
   const [sidebarItems, setSidebarItems] = useState(
     SIDEBAR_ITEMS.map((item) => ({
       ...item,

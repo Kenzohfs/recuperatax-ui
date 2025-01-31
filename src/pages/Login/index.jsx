@@ -22,7 +22,6 @@ const Login = () => {
   const [user, setUser] = useState('');
   const [pass, setPass] = useState('');
 
-  // TODO: Convert Modal to component
   return (
     <Background>
       <ModalContainer>

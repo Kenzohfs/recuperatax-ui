@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { FaLock, FaUserAlt } from 'react-icons/fa';
+import { useNavigate } from 'react-router';
 
 import Logo from '../../assets/logo-white.png';
 import Button from '../../components/Button';
 import Input from '../../components/Input';
+import PrivatePaths from '../../routes/privatePaths';
 import {
   Background,
   ForgotPassword,
@@ -19,8 +21,20 @@ import {
 } from './styled';
 
 const Login = () => {
+  const navigate = useNavigate();
+
   const [user, setUser] = useState('');
   const [pass, setPass] = useState('');
+
+  const reset = () => {
+    setUser('');
+    setPass('');
+  };
+
+  const onLoginClick = () => {
+    reset();
+    navigate(PrivatePaths.COMPANIES);
+  };
 
   return (
     <Background>
@@ -57,7 +71,7 @@ const Login = () => {
         </ModalContent>
 
         <ModalBottom>
-          <Button fullWidth={true} onClick={() => {}}>
+          <Button fullWidth={true} onClick={onLoginClick}>
             LOGIN
           </Button>
         </ModalBottom>

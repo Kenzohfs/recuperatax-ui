@@ -15,7 +15,7 @@ export const SIDEBAR_ITEMS = [
     id: 1,
     icon: FaHouse,
     label: 'Início',
-    path: PrivatePaths.HOME,
+    path: PrivatePaths.COMPANIES,
     children: [],
   },
   {

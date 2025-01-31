@@ -1,4 +1,5 @@
 import React from 'react';
+import { useCompanies } from '../../hooks/companies';
 import {
   ActionsContainer,
   Container,
@@ -12,9 +13,19 @@ import {
 } from './styled';
 
 const Company = ({
-  company = { name: '', cnpj: '', contact: '', email: '', state: '', city: '' },
+  company = {
+    id: '',
+    name: '',
+    cnpj: '',
+    contact: '',
+    email: '',
+    state: '',
+    city: '',
+  },
+  onActionSuccess = () => {},
 }) => {
   const {
+    id = '',
     name = '',
     cnpj = '',
     contact = '',
@@ -22,6 +33,13 @@ const Company = ({
     state = '',
     city = '',
   } = company;
+
+  const { DeleteCompany } = useCompanies();
+
+  const onDeleteClick = async () => {
+    await DeleteCompany(id);
+    onActionSuccess();
+  };
 
   return (
     <Container>
@@ -55,7 +73,7 @@ const Company = ({
       <ActionsContainer>
         <ViewIcon />
         <EditIcon />
-        <DeleteIcon />
+        <DeleteIcon onClick={onDeleteClick} />
       </ActionsContainer>
     </Container>
   );

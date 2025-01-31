@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo } from 'react';
+import React, { useMemo } from 'react';
 
 import Link from './CellRenderers/Link';
 import {
@@ -13,6 +13,7 @@ import {
 const Table = ({ headers, data }) => {
   const cellRenderer = (cell, cellRendererType) => {
     cell.isComponent = false;
+
     switch (cellRendererType) {
       case 'link':
         cell.isComponent = true;
@@ -34,10 +35,6 @@ const Table = ({ headers, data }) => {
       });
     });
   }, [data, headers]);
-
-  useEffect(() => {
-    console.log(myDataSortedByHeader);
-  }, [myDataSortedByHeader]);
 
   return (
     <TableContainer>

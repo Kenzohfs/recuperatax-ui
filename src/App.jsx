@@ -1,15 +1,22 @@
-import { ThemeProvider } from 'styled-components'
-import './App.css'
-import RouterProvider from './routes/Router'
+import { ThemeProvider } from 'styled-components';
+import './App.css';
+import RouterProvider from './routes/Router';
 
-import theme from './style/theme'
+import { CompaniesProvider } from './hooks/companies';
+import { SheetsProvider } from './hooks/sheets';
+
+import theme from './style/theme';
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <RouterProvider />
+      <CompaniesProvider>
+        <SheetsProvider>
+          <RouterProvider />
+        </SheetsProvider>
+      </CompaniesProvider>
     </ThemeProvider>
-  )
+  );
 }
 
-export default App
+export default App;

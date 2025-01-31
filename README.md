@@ -62,3 +62,20 @@ npm run dev
 ```
 
 Agora, o projeto estará disponível em `http://localhost:5173`.
+
+## Evidências
+
+### Tela de Login
+![Tela de Login](/public/login.png)
+
+### Empresas
+![Empresas](/public/empresas.png)
+
+### Sidebar
+![Sidebar](/public/sidebar.png)
+
+### Cadastro Empresas
+![Cadastro Empresas](/public/cadastroempresa.png)
+
+### Planilhas
+![Planilhas](/public/planilhas.png)

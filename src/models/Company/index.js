@@ -61,7 +61,7 @@ export class CompanyModel {
     }
 
     if (company.cnpj && !this.isCNPJValid(company.cnpj)) {
-      errors.push('CNPJ inválido');
+      errors.push('Formatdo de CNPJ inválido');
     }
 
     if (!company.name) {

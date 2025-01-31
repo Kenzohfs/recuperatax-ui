@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router';
 import Button from '../../components/Button';
 import Input from '../../components/Input';
 import { useCompanies } from '../../hooks/companies';
+import { useToast } from '../../hooks/toast';
 import { CompanyModel } from '../../models/Company';
 import PrivatePaths from '../../routes/privatePaths';
 import {
@@ -32,6 +33,7 @@ const steps = [
 
 const CompanyForm = () => {
   const navigate = useNavigate();
+  const { addToast } = useToast();
   const { CreateCompany } = useCompanies();
 
   const [selectedTab, setSelectedTab] = useState(steps[0]);
@@ -49,7 +51,11 @@ const CompanyForm = () => {
     const errors = new CompanyModel().validateFields(company);
 
     if (errors.length > 0) {
-      alert(errors.join('\n'));
+      addToast({
+        type: 'error',
+        title: 'Erro ao salvar',
+        description: errors.join(', '),
+      });
       return;
     }
 

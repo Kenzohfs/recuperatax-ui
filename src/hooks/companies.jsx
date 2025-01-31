@@ -1,5 +1,6 @@
 import { createContext, useContext } from 'react';
 import { api } from '../api';
+import { useToast } from './toast';
 
 const CompaniesContext = createContext({
   GetCompanies: async (name) => {},
@@ -8,6 +9,8 @@ const CompaniesContext = createContext({
 });
 
 export const CompaniesProvider = ({ children }) => {
+  const { addToast } = useToast();
+
   const GetCompanies = async (name = '') => {
     try {
       const query = new URLSearchParams({ name }).toString();
@@ -24,6 +27,11 @@ export const CompaniesProvider = ({ children }) => {
   const CreateCompany = async (company) => {
     try {
       const response = await api.post('/companies', company);
+
+      addToast({
+        type: 'success',
+        title: 'Empresa Criada',
+      });
 
       return response.data || {};
     } catch (error) {

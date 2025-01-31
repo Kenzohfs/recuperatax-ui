@@ -48,7 +48,7 @@ Antes de rodar o frontend, é necessário iniciar o JSON Server:
 ```sh
 cd json-server
 npm install -g json-server //caso não tenha instalado
-npx json-server --watch db.json --port 3000
+json-server --watch db.json --port 3000
 ```
 
 Isso fará com que a API falsa rode na porta `3000`.

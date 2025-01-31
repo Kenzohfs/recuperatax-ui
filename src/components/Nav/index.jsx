@@ -1,12 +1,21 @@
 import React from 'react';
 import { FaRegBell, FaRegUser } from 'react-icons/fa6';
-import { IconContainer, Item, NavContainer } from './styled';
+import Logo from '../../assets/logo-light-gray.png';
+import {
+  IconContainer,
+  Item,
+  LogoContainer,
+  LogoImg,
+  NavContainer,
+} from './styled';
 
 const Nav = () => {
   return (
     <NavContainer>
       <Item>
-        <h1>Logo</h1>
+        <LogoContainer>
+          <LogoImg src={Logo} alt="Logo" />
+        </LogoContainer>
       </Item>
 
       <Item>

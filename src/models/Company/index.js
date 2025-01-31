@@ -1,6 +1,4 @@
 export class CompanyModel {
-  cnpj;
-
   constructor() {
     this.cnpj = '';
     this.name = '';

@@ -9,6 +9,7 @@ const PrivatePaths = {
   OPEN_CALL: '/open-call',
   COMPANIES: '/companies',
   REGISTERS_COMPANIES: '/companies/registers',
+  SHEETS: '/sheets',
 };
 
 export default PrivatePaths;

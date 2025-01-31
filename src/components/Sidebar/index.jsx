@@ -50,6 +50,17 @@ const Sidebar = () => {
     return null;
   };
 
+  const resetExpanded = () => {
+    setSidebarItems(
+      sidebarItems.map((item) => ({
+        ...item,
+        isExpanded: false,
+      }))
+    );
+
+    setIsExpanded(false);
+  };
+
   const onMenuItemClick = (id) => {
     const item = recursiveFind(sidebarItems, id);
 
@@ -61,6 +72,7 @@ const Sidebar = () => {
       return;
     }
 
+    resetExpanded();
     navigate(item.path);
   };
 
@@ -75,6 +87,7 @@ const Sidebar = () => {
       return;
     }
 
+    resetExpanded();
     navigate(item.path);
   };
 

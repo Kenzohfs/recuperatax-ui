@@ -36,26 +36,14 @@ export const SIDEBAR_ITEMS = [
     icon: FaFile,
     label: 'Arquivos Fiscais',
     path: PrivatePaths.FISCAL_FILES,
-    children: [
-      {
-        id: 9,
-        label: 'Empresas',
-        path: PrivatePaths.COMPANIES,
-      },
-    ],
+    children: [],
   },
   {
     id: 4,
     icon: FaFileWaveform,
     label: 'Relatório',
     path: PrivatePaths.REPORTS,
-    children: [
-      {
-        id: 10,
-        label: 'Empresas',
-        path: PrivatePaths.COMPANIES,
-      },
-    ],
+    children: [],
   },
   {
     id: 5,
@@ -79,8 +67,8 @@ export const SIDEBAR_ITEMS = [
     children: [
       {
         id: 11,
-        label: 'Empresas',
-        path: PrivatePaths.COMPANIES,
+        label: 'Planilhas',
+        path: PrivatePaths.SHEETS,
       },
     ],
   },

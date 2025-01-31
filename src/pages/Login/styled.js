@@ -24,6 +24,14 @@ export const ModalHeader = styled.div`
   margin-bottom: 1rem;
 `;
 
+export const LogoContainer = styled.div`
+  width: 100%;
+`;
+
+export const LogoImg = styled.img`
+  width: 100%;
+`;
+
 export const WelcomeMessage = styled.p`
   font-size: ${({ theme }) => theme.fontSizes.big};
   font-weight: 600;

@@ -17,6 +17,14 @@ export const Item = styled.div`
   gap: 1rem;
 `;
 
+export const LogoContainer = styled.div`
+  height: 100%;
+`;
+
+export const LogoImg = styled.img`
+  height: 100%;
+`;
+
 export const IconContainer = styled.div`
   height: 100%;
   width: 40px;

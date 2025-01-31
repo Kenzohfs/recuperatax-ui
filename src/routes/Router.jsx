@@ -5,6 +5,7 @@ import CompanyForm from '../pages/CompanyForm';
 import Home from '../pages/Home';
 import Login from '../pages/Login';
 import NotFound from '../pages/NotFound';
+import Sheets from '../pages/Sheets';
 import PrivatePaths from './privatePaths';
 import PublicPaths from './publicPaths';
 
@@ -14,12 +15,13 @@ const RouterProvider = () => (
       <Route path={PublicPaths.LOGIN} element={<Login />} />
 
       <Route element={<Layout />}>
-        <Route path={PrivatePaths.HOME} element={<Home />}></Route>
-        <Route path={PrivatePaths.COMPANIES} element={<Companies />}></Route>
+        <Route path={PrivatePaths.HOME} element={<Home />} />
+        <Route path={PrivatePaths.COMPANIES} element={<Companies />} />
         <Route
           path={PrivatePaths.REGISTERS_COMPANIES}
           element={<CompanyForm />}
-        ></Route>
+        />
+        <Route path={PrivatePaths.SHEETS} element={<Sheets />} />
       </Route>
       <Route path="*" element={<NotFound />} />
     </Routes>

@@ -1,8 +1,64 @@
-# React + Vite
+# Projeto React com JSON Server
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto foi desenvolvido utilizando **Vite** e **React.js**. Ele depende de um **JSON Server** para fornecer dados simulados.
 
-Currently, two official plugins are available:
+## Tecnologias Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Vite**
+- **React.js**
+- **JSON Server**
+
+## Estrutura do Projeto
+
+```
+📦 recuperatax-ui
+├── 📂 json-server     # Pasta contendo o JSON Server
+│   ├── db.json       # Arquivo com os dados da API
+├── 📂 src            # Código-fonte do React
+│   ├── assets        # Arquivos utilziados na aplicação
+│   ├── components    # Componentes reutilizáveis
+│   ├── consts        # Constantes da aplicação
+│   ├── hooks         # Hooks customizados
+│   ├── layout        # Página layout da aplicação
+│   ├── models        # Modelos de dados, validação de dados
+│   ├── pages         # Páginas da aplicação
+│   ├── routes        # Rotas da aplicação
+└── README.md         # Documentação do projeto
+```
+
+## Como Rodar o Projeto
+
+### Clonar o Repositório
+
+```sh
+git clone https://github.com/Kenzohfs/recuperatax-ui.git
+cd recuperatax-ui
+```
+
+### Instalar as Dependências
+
+```sh
+npm install
+```
+
+### Iniciar o JSON Server
+
+Antes de rodar o frontend, é necessário iniciar o JSON Server:
+
+```sh
+cd json-server
+npm install -g json-server //caso não tenha instalado
+npx json-server --watch db.json --port 3000
+```
+
+Isso fará com que a API falsa rode na porta `3000`.
+
+### Rodar o Projeto React
+
+Em outra aba do terminal, volte para a raiz do projeto e inicie o frontend:
+
+```sh
+npm run dev
+```
+
+Agora, o projeto estará disponível em `http://localhost:5173`.

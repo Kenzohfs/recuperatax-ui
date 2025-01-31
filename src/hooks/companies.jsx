@@ -36,6 +36,11 @@ export const CompaniesProvider = ({ children }) => {
       return response.data || {};
     } catch (error) {
       console.error('Error creating company', error);
+      addToast({
+        type: 'error',
+        title: 'Erro ao criar empresa',
+      });
+
       return {};
     }
   };
@@ -44,9 +49,19 @@ export const CompaniesProvider = ({ children }) => {
     try {
       const response = await api.delete(`/companies/${companyId}`);
 
+      addToast({
+        type: 'success',
+        title: 'Empresa Deletada',
+      });
+
       return response.data || {};
     } catch (error) {
       console.error('Error deleting company', error);
+      addToast({
+        type: 'error',
+        title: 'Erro ao deletar empresa',
+      });
+
       return {};
     }
   };

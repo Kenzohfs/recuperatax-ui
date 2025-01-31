@@ -1,6 +1,8 @@
 import React from 'react';
 import { FaRegBell, FaRegUser } from 'react-icons/fa6';
+import { useNavigate } from 'react-router';
 import Logo from '../../assets/logo-light-gray.png';
+import PublicPaths from '../../routes/publicPaths';
 import {
   IconContainer,
   Item,
@@ -10,6 +12,12 @@ import {
 } from './styled';
 
 const Nav = () => {
+  const navigate = useNavigate();
+
+  const onUserClick = () => {
+    navigate(PublicPaths.LOGIN);
+  };
+
   return (
     <NavContainer>
       <Item>
@@ -23,7 +31,7 @@ const Nav = () => {
           <FaRegBell />
         </IconContainer>
         <IconContainer>
-          <FaRegUser />
+          <FaRegUser onClick={onUserClick} />
         </IconContainer>
       </Item>
     </NavContainer>
